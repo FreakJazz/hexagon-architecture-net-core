@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gTOLY0qBWyYXvsRO0AnedfuZT7d+hid/r24bemmwplSyeSHsORHsqpddPfn3ppkH8mvI2xbL18vTPH7PyPFUYw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\Documents\\NETCORE\\hexagon-architecture-net-core\\PLANTILLA_WS\\1. Services\\Services.Api\\Services.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512"
+  ],
+  "logs": []
+}
