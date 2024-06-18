@@ -1,0 +1,8 @@
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.csproj.AssemblyReference.cache
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.Messages.resources
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.csproj.GenerateResource.cache
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.AssemblyInfoInputs.cache
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.AssemblyInfo.cs
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.sourcelink.json

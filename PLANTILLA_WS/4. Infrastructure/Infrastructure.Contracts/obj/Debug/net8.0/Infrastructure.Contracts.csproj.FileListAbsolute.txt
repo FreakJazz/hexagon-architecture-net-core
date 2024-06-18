@@ -1,0 +1,13 @@
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\bin\Debug\net8.0\Infrastructure.Contracts.deps.json
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\bin\Debug\net8.0\Infrastructure.Contracts.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\bin\Debug\net8.0\Infrastructure.Contracts.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\Infrastructure.Contracts.csproj.AssemblyReference.cache
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\Infrastructure.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\Infrastructure.Contracts.AssemblyInfoInputs.cache
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\Infrastructure.Contracts.AssemblyInfo.cs
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\Infrastructure.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\Infrastructure.Contracts.sourcelink.json
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\Infrastructure.Contracts.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\refint\Infrastructure.Contracts.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\Infrastructure.Contracts.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure.Contracts\obj\Debug\net8.0\ref\Infrastructure.Contracts.dll
