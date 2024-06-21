@@ -14,3 +14,7 @@ C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. In
 C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll
 C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure\bin\Debug\net8.0\Common.Logs.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure\bin\Debug\net8.0\Domain.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure\bin\Debug\net8.0\Domain.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\4. Infrastructure\Infrastructure\bin\Debug\net8.0\Common.Logs.pdb

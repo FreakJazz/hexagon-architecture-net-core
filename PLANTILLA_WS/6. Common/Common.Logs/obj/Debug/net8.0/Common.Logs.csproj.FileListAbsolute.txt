@@ -6,3 +6,10 @@ C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Co
 C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.AssemblyInfo.cs
 C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.sourcelink.json
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\bin\Debug\net8.0\Common.Logs.deps.json
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\bin\Debug\net8.0\Common.Logs.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\bin\Debug\net8.0\Common.Logs.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\refint\Common.Logs.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\Common.Logs.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\6. Common\Common.Logs\obj\Debug\net8.0\ref\Common.Logs.dll

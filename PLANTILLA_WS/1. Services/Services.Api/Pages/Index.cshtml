@@ -1,10 +1,40 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Index";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">@Model.Title</h1>
+    <p class="lead">@Model.Description</p>
+
+    <hr class="my-4" />
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Version</h5>
+            <p class="card-text">@Model.Version</p>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Contact</h5>
+            <p class="card-text">
+                <strong>Name:</strong> @Model.Contact.Name<br />
+                <strong>Email:</strong> <a href="mailto:@Model.Contact.Email">@Model.Contact.Email</a><br />
+                <strong>URL:</strong> <a href="@Model.Contact.Url" target="_blank">@Model.Contact.Url</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">License</h5>
+            <p class="card-text">
+                <strong>Name:</strong> @Model.License.Name<br />
+                <strong>URL:</strong> <a href="@Model.License.Url" target="_blank">@Model.License.Url</a>
+            </p>
+        </div>
+    </div>
 </div>

@@ -12,9 +12,9 @@ namespace Services.Api.Configurations
             {
                 s.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Version = "PlantillaCore8v1.0.0",
-                    Title = "Plantilla generica de NET CORE 8 con PostgreSQL",
-                    Description = "Servicios Repositorio de Transparencia - Swagger Surface",
+                    Version = "TemplateCore8v1.0.0",
+                    Title = "GENERAL TEMPLATE NET CORE HEXAGON ARCHITECTURE WITH SWAGGER with PostgreSQL",
+                    Description = "General template - Swagger Surface",
                     Contact = new OpenApiContact { Name = "Jazmin Rodriguez", Email = "jazzrb2307@gmail.com", Url = new Uri("https://github.com/FreakJazz/") },
                     License = new OpenApiLicense { Name = "GNU GENERAL PUBLIC LICENSE", Url = new Uri("https://fsf.org/") }
                 });

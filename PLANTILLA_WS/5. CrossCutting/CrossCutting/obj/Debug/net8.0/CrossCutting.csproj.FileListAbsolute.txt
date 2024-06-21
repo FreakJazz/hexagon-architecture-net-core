@@ -11,3 +11,14 @@ C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. Cr
 C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\obj\Debug\net8.0\refint\CrossCutting.dll
 C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\obj\Debug\net8.0\CrossCutting.pdb
 C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\obj\Debug\net8.0\ref\CrossCutting.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Application.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Common.Logs.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Domain.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Infrastructure.Contracts.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Application.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Domain.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Common.Logs.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\bin\Debug\net8.0\Infrastructure.Contracts.pdb
+C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\5. CrossCutting\CrossCutting\obj\Debug\net8.0\CrossCutting.csproj.CopyComplete

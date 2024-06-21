@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.6" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\3. Domain\Domain\Domain.csproj" />
+    <ProjectReference Include="..\..\6. Common\Common.Logs\Common.Logs.csproj" />
     <ProjectReference Include="..\Infrastructure.Contracts\Infrastructure.Contracts.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,5 @@
+2024-06-20T13:57:46.8805828-05:00  [INF] Now listening on: "https://localhost:7279" (d826f4b8)
+2024-06-20T13:57:46.8838181-05:00  [INF] Now listening on: "http://localhost:5036" (d826f4b8)
+2024-06-20T13:57:46.8870267-05:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-06-20T13:57:46.8928707-05:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-06-20T13:57:46.8948336-05:00  [INF] Content root path: "C:\Users\User\Documents\NETCORE\hexagon-architecture-net-core\PLANTILLA_WS\1. Services\Services.Api" (cc26f24e)
