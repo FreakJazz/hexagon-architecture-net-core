@@ -49,40 +49,39 @@ namespace Services.Api.Controllers
                 response.ok = false;
                 return StatusCode(StatusCodes.Status404NotFound, response);
             }
-            
         }
 
-        [HttpGet]
-        [Route("GetAllUsers")]
-        [Produces("Application/Json", Type = typeof(IQueryable<UserViewModel>))]
-        public IActionResult GetAllUsers()
-        {
-            var response = new ResponseViewModel();
-            try
-            {
-                var userResult = _usersAppService.GetUsers();
-                if (userResult == null)
-                {
-                    response.statusCode = 200;
-                    response.message = "No existe el usuario";
-                    response.ok = false;
-                    return StatusCode(StatusCodes.Status200OK, response);
-                }
-                response.statusCode = 200;
-                response.message = "Usuario obtenido con exito";
-                response.ok = true;
-                response.data = userResult;
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Ha ocurrido un error al consultar los usuarios");
-                response.statusCode = 404;
-                response.message = "Ha ocurrido un error al consultar el usuario";
-                response.ok = false;
-                return StatusCode(StatusCodes.Status404NotFound, response);
-            }
+        //[HttpGet]
+        //[Route("GetAllUsers")]
+        //[Produces("Application/Json", Type = typeof(IQueryable<UserViewModel>))]
+        //public IActionResult GetAllUsers()
+        //{
+        //    var response = new ResponseViewModel();
+        //    try
+        //    {
+        //        var userResult = _usersAppService.GetUsers();
+        //        if (userResult == null)
+        //        {
+        //            response.statusCode = 200;
+        //            response.message = "No existe el usuario";
+        //            response.ok = false;
+        //            return StatusCode(StatusCodes.Status200OK, response);
+        //        }
+        //        response.statusCode = 200;
+        //        response.message = "Usuario obtenido con exito";
+        //        response.ok = true;
+        //        response.data = userResult;
+        //        return Ok(response);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "Ha ocurrido un error al consultar los usuarios");
+        //        response.statusCode = 404;
+        //        response.message = "Ha ocurrido un error al consultar el usuario";
+        //        response.ok = false;
+        //        return StatusCode(StatusCodes.Status404NotFound, response);
+        //    }
 
-        }
+        //}
     }
 }

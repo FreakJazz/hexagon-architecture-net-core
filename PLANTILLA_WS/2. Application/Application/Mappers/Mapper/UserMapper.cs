@@ -38,6 +38,7 @@ namespace Application.Mappers.Mapper
                 nameUser = userModel.NAME_USER,
                 lastnameUser = userModel.LASTNAME_USER,
                 email = userModel.EMAIL,
+                password = userModel.PASSWORD,
                 bornDate = userModel.BORN_DATE,
                 role = userModel.ROLE,
                 sex = userModel.SEX,
@@ -64,18 +65,18 @@ namespace Application.Mappers.Mapper
             };
             return userModel;
         }
-        public AuthenticationModel.LoginModel MapLogin(AuthenticationViewModel.Login login)
+        public UserModel MapLogin(loginModel login)
         {
-            var userModel = new AuthenticationModel.LoginModel
+            var userModel = new UserModel
             {
                 EMAIL = login.email,
                 PASSWORD = login.password,
             };
             return userModel;
         }
-        public AuthenticationModel.RegisterModel MapRegister(AuthenticationViewModel.Register register)
+        public UserModel MapRegister(UserViewModel register)
         {
-            var registerModel = new AuthenticationModel.RegisterModel
+            var registerModel = new UserModel
             {
                 NAME_USER = register.nameUser,
                 LASTNAME_USER = register.lastnameUser,
@@ -89,14 +90,14 @@ namespace Application.Mappers.Mapper
             return registerModel;
         }
 
-        public AuthenticationViewModel.Register MapRegisterInsert(AuthenticationModel.RegisterModel register)
+        public UserViewModel MapRegisterInsert(UserModel register)
         {
-            var registerModel = new AuthenticationViewModel.Register
+            var registerModel = new UserViewModel
             {
+                idUser = register.ID_USER,
                 nameUser = register.NAME_USER,
                 lastnameUser = register.LASTNAME_USER,
                 email = register.EMAIL,
-                password = register.PASSWORD,
                 bornDate = register.BORN_DATE,
                 role = register.ROLE,
                 sex = register.SEX,

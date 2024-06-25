@@ -4,7 +4,6 @@ using Infrastructure.Contracts.Context;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Domain.Models;
-using static Domain.Models.AuthenticationModel;
 
 namespace Infrastructure.Context
 {
@@ -16,9 +15,9 @@ namespace Infrastructure.Context
         {
             _configuration = configuration;
         }
-        public DbSet<AuthenticationModel.LoginModel> Login { get; set; }
-        public DbSet<AuthenticationModel.RegisterModel> Register { get; set; }
-        public DbSet<UserModel> Users { get; set; }
+        //public DbSet<AuthenticationModel.LoginModel> Login { get; set; }
+        public DbSet<UserModel> User { get; set; }
+        //public DbSet<UserModel> Users { get; set; }
 
         public new int SaveChanges()
         {
@@ -30,14 +29,10 @@ namespace Infrastructure.Context
             base.OnModelCreating(modelBuilder);
 
             // Configuración explícita de los nombres de las tablas
-            modelBuilder.Entity<AuthenticationModel.LoginModel>().ToTable("Users");
-            modelBuilder.Entity<AuthenticationModel.RegisterModel>().ToTable("Users");
-            modelBuilder.Entity<UserModel>().ToTable("Users");
+            modelBuilder.Entity<UserModel>().ToTable("User");
 
             // Configurar LoginModel como una entidad sin clave
-            modelBuilder.Entity<AuthenticationModel.LoginModel>().HasNoKey();
-            modelBuilder.Entity<RegisterModel>().HasKey(r => r.ID_USER);
-            modelBuilder.Entity<UserModel>().HasNoKey();
+            modelBuilder.Entity<UserModel>().HasKey(r => r.ID_USER);
         }
 
         public new Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

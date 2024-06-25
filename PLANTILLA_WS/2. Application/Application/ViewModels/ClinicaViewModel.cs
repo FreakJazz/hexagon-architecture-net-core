@@ -8,7 +8,7 @@ namespace Application.ViewModels
 {
     public class ClinicaViewModel
     {
-        public int idClinica { get; set; }
+        public int? idClinica { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public string nameClinica { get; set; }

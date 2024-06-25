@@ -9,16 +9,17 @@ namespace Application.ViewModels
 {
     public class UserViewModel
     {
-        public int idUser { get; set; }
+        public int? idUser { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public string nameUser { get; set; }
         public string lastnameUser { get; set; }
         public string email { get; set; }
-        public DateTime bornDate { get; set; }
+        public string password { get; set; }
+        public DateOnly bornDate { get; set; }
         public string role { get; set; }
         public string sex { get; set; }
         public string dniUser { get; set; }
-        public Byte[] photoUser { get; set; }
+        public Byte[]? photoUser { get; set; }
     }
 }

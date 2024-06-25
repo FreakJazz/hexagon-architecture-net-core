@@ -6,7 +6,7 @@ namespace Application.Interfaces
     {
         public UserViewModel GetUserById(int userId);
         public IQueryable<UserViewModel> GetUsers();
-        public AuthenticationViewModel.Register GetUserByUsernameAndPassword(AuthenticationViewModel.Login login);
-        public AuthenticationViewModel.Register RegisterUser(AuthenticationViewModel.Register register);
+        public UserViewModel GetUserByUsernameAndPassword(loginModel login);
+        public UserViewModel RegisterUser(UserViewModel register);
     }
 }

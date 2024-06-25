@@ -3,7 +3,6 @@ using Application.Mappers.Contracts;
 using Application.ViewModels;
 using Domain.Interfaces;
 using Domain.Models;
-using static Application.ViewModels.AuthenticationViewModel;
 
 namespace Application.Services
 {
@@ -11,13 +10,11 @@ namespace Application.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IUserMapper _userMapper;
-        private readonly IPasswordHasherAppService _passwordHasherAppService;
 
-        public UsersAppService(IUserRepository userRepository, IUserMapper userMapper, IPasswordHasherAppService passwordHasherAppService)
+        public UsersAppService(IUserRepository userRepository, IUserMapper userMapper)
         {
             _userRepository = userRepository;
             _userMapper = userMapper;
-            _passwordHasherAppService = passwordHasherAppService;
         }
         public void Dispose()
         {
@@ -33,17 +30,17 @@ namespace Application.Services
             var users = _userRepository.GetAllUsers();
             return _userMapper.MapUsers(users);
         }
-        public AuthenticationViewModel.Register GetUserByUsernameAndPassword(AuthenticationViewModel.Login login)
+        public UserViewModel GetUserByUsernameAndPassword(loginModel login)
         {
             var userModel = _userMapper.MapLogin(login);
             var user = _userRepository.GetUserByEmail(userModel);
-            if (user == null || !_passwordHasherAppService.VerifyPassword(login.password, user.PASSWORD))
+            if (user == null)
             {
                 return null;
             }
-            return _userMapper.MapRegisterInsert(user);
+            return _userMapper.MapUser(user);
         }
-        public AuthenticationViewModel.Register RegisterUser(AuthenticationViewModel.Register register)
+        public UserViewModel RegisterUser(UserViewModel register)
         {
             var userModel = _userMapper.MapRegister(register);
             var user = _userRepository.RegisterUser(userModel);

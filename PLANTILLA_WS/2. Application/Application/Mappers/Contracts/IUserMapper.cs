@@ -6,10 +6,10 @@ namespace Application.Mappers.Contracts
     public interface IUserMapper
     {
         public IQueryable<UserViewModel> MapUsers(IQueryable<UserModel> items);
+        public UserModel MapRegister(UserViewModel register);
+        public UserModel MapLogin(loginModel login);
         public UserViewModel MapUser(UserModel userModel);
-        public AuthenticationModel.LoginModel MapLogin(AuthenticationViewModel.Login login);
-        public AuthenticationModel.RegisterModel MapRegister(AuthenticationViewModel.Register register);
+        public UserViewModel MapRegisterInsert(UserModel register);
         public UserModel MapUserInsert(UserViewModel userViewModel);
-        public AuthenticationViewModel.Register MapRegisterInsert(AuthenticationModel.RegisterModel register);
     }
 }

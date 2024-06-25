@@ -1,18 +1,11 @@
 ﻿using Common.Logs;
 using Application.ViewModels;
-using Services.Api.Configurations;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
-using System.Net;
 using System.Security.Claims;
 using System.Text;
 using Application.Interfaces;
-using Application.Services;
-using Microsoft.AspNetCore.Identity;
-using Domain.Models;
 
 //*****************************************************************************************************
 //                                          SLENDERCODE
@@ -47,13 +40,28 @@ namespace Services.Api.Controllers
         
         [HttpPost]
         [Route("AuthenticateUser")]
-        public IActionResult AuthenticateUser([FromBody] AuthenticationViewModel.Login login)
+        public IActionResult AuthenticateUser([FromBody] loginModel login)
         {
             try
             {
+                var response = new ResponseViewModel();
                 var user = _usersAppService.GetUserByUsernameAndPassword(login);
                 if (user == null)
-                    return Unauthorized();
+                {
+                    response.statusCode = 404;
+                    response.message = "No existe el usuario";
+                    response.ok = false;
+                    response.data = null;
+                    return StatusCode(StatusCodes.Status404NotFound, response);
+                }
+                if (!_passwordHasherAppService.VerifyPassword(login.password, user.password))
+                {
+                    response.statusCode = 400;
+                    response.message = "Contraseña Incorrecta";
+                    response.ok = false;
+                    response.data = null;
+                    return StatusCode(StatusCodes.Status400BadRequest, response);
+                }
                 var secretKey = _configuration.GetSection("ConfigKeys").GetSection("jwtKey").Value;
                 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
                 var tokenExpiration = DateTime.UtcNow.AddMinutes(int.Parse(_configuration.GetSection("ConfigKeys").GetSection("TimeAuthToken").Value));
@@ -72,15 +80,19 @@ namespace Services.Api.Controllers
                 );
                 var Authtoken = new JwtSecurityTokenHandler().WriteToken(jwtAuth);
                 var RefreshToken = new JwtSecurityTokenHandler().WriteToken(jwtRefresh);
-                var response = new
+                var token = new
                 {
                     Authtoken,
                     ExpiresAuthToken = tokenExpiration,
                     RefreshToken,
-                    ExpiresRefreshToken = tokenExpiration,
+                    ExpiresRefreshToken = tokenRefreshExpiration,
 
                 };
-                return Ok(response);
+                response.statusCode = 200;
+                response.message = "Usuario obtenido con exito";
+                response.ok = true;
+                response.data = token;
+                return StatusCode(StatusCodes.Status200OK, response);
             }
             catch (Exception ex)
             {
@@ -91,11 +103,12 @@ namespace Services.Api.Controllers
 
         [HttpPost]
         [Route("RegisterUser")]
-        public IActionResult RegisterUser([FromBody] AuthenticationViewModel.Register register)
+        public IActionResult RegisterUser([FromBody] UserViewModel register)
         {
             try
             {
-                var userHash = new AuthenticationViewModel.Register
+                var response = new ResponseViewModel();
+                var userHash = new UserViewModel
                 {
                     idUser = register.idUser,
                     nameUser = register.nameUser,
@@ -109,7 +122,13 @@ namespace Services.Api.Controllers
                 };
                 var user = _usersAppService.RegisterUser(userHash);
                 if (user == null)
-                    return Unauthorized();
+                {
+                    response.statusCode = 404;
+                    response.message = "Error al registrar el usuario";
+                    response.ok = false;
+                    response.data = null;
+                    return StatusCode(StatusCodes.Status404NotFound, response);
+                }
                 var secretKey = _configuration.GetSection("ConfigKeys").GetSection("jwtKey").Value;
                 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
                 var tokenExpiration = DateTime.UtcNow.AddMinutes(int.Parse(_configuration.GetSection("ConfigKeys").GetSection("TimeAuthToken").Value));
@@ -131,7 +150,7 @@ namespace Services.Api.Controllers
 
                 var Authtoken = new JwtSecurityTokenHandler().WriteToken(jwtAuth);
                 var RefreshToken = new JwtSecurityTokenHandler().WriteToken(jwtRefresh);
-                var response = new
+                var token = new
                 {
                     Authtoken,
                     ExpiresAuthToken = tokenExpiration,
@@ -139,7 +158,11 @@ namespace Services.Api.Controllers
                     ExpiresRefreshToken = tokenExpiration,
 
                 };
-                return Ok(response);
+                response.statusCode = 201;
+                response.message = "Usuario creado con exito";
+                response.ok = true;
+                response.data = token;
+                return StatusCode(StatusCodes.Status201Created, response);
             }
             catch (Exception ex)
             {
@@ -148,7 +171,7 @@ namespace Services.Api.Controllers
             }
         }
 
-        private Claim[] BuildClaims(AuthenticationViewModel.Register register)
+        private Claim[] BuildClaims(UserViewModel register)
         {
             return new[]
             {
