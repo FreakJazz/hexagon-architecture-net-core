@@ -49,37 +49,47 @@ namespace Infrastructure.Repository
             return _context.User.FirstOrDefault(u => u.EMAIL == login.EMAIL);
         }
 
-        public string AddUser(UserModel user)
+        public UserModel UpdateUser(UserModel updatedUser)
         {
-            _context.User.Add(user);
+            var existingUser = _context.User.Find(updatedUser.ID_USER);
+            if (existingUser == null)
+            {
+                return null;
+            }
+
+            // Update the properties you want to change
+            existingUser.NAME_USER = updatedUser.NAME_USER;
+            existingUser.LASTNAME_USER = updatedUser.LASTNAME_USER;
+            existingUser.EMAIL = updatedUser.EMAIL;
+            existingUser.BORN_DATE = updatedUser.BORN_DATE;
+            existingUser.ROLE = updatedUser.ROLE;
+            existingUser.SEX = updatedUser.SEX;
+            existingUser.DNI_USER = updatedUser.DNI_USER;
+            existingUser.PHOTO_USER = updatedUser.PHOTO_USER;
+            existingUser.UPDATED_AT = DateTime.UtcNow;
+
+            _context.Entry(existingUser).Property("NAME_USER").IsModified = true;
+            _context.Entry(existingUser).Property("LASTNAME_USER").IsModified = true;
+            _context.Entry(existingUser).Property("EMAIL").IsModified = true;
+            _context.Entry(existingUser).Property("BORN_DATE").IsModified = true;
+            _context.Entry(existingUser).Property("ROLE").IsModified = true;
+            _context.Entry(existingUser).Property("SEX").IsModified = true;
+            _context.Entry(existingUser).Property("DNI_USER").IsModified = true;
+            _context.Entry(existingUser).Property("PHOTO_USER").IsModified = true;
+            _context.Entry(existingUser).Property("UPDATED_AT").IsModified = true;
             _context.SaveChanges();
-            return "Save";
+            return existingUser;
         }
 
-        public string AddUserRegister(UserModel user)
-        {
-            _context.User.Add(user);
-            _context.SaveChanges();
-            return "Save";
-        }
-
-        public string UpdateUser(UserModel user)
-        {
-            _context.User.Update(user);
-            _context.SaveChanges();
-            return "Save";
-
-        }
-
-        public string DeleteUser(int id)
+        public int DeleteUser(int id)
         {
             var user = _context.User.Find(id);
             if (user != null)
             {
                 _context.User.Remove(user);
-                _context.SaveChanges();
+                return _context.SaveChanges();
             }
-            return "Save";
+            return 0;
         }
     }
 

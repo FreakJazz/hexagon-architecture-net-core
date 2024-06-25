@@ -15,9 +15,7 @@ namespace Infrastructure.Context
         {
             _configuration = configuration;
         }
-        //public DbSet<AuthenticationModel.LoginModel> Login { get; set; }
         public DbSet<UserModel> User { get; set; }
-        //public DbSet<UserModel> Users { get; set; }
 
         public new int SaveChanges()
         {

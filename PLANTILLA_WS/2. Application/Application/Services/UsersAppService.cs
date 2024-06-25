@@ -23,7 +23,7 @@ namespace Application.Services
         public UserViewModel GetUserById(int userId)
         {
             var user = _userRepository.GetUserById(userId);
-            return _userMapper.MapUser(user);
+            return _userMapper.MapUserGet(user);
         }
         public IQueryable<UserViewModel> GetUsers()
         {
@@ -40,6 +40,16 @@ namespace Application.Services
             }
             return _userMapper.MapUser(user);
         }
+        public UserViewModel UpdateUser(UserViewModel userUpdate)
+        {
+            var userModel = _userMapper.MapUserInsert(userUpdate);
+            var user = _userRepository.UpdateUser(userModel);
+            if (user == null)
+            {
+                return null;
+            }
+            return _userMapper.MapUserGet(user);
+        }
         public UserViewModel RegisterUser(UserViewModel register)
         {
             var userModel = _userMapper.MapRegister(register);
@@ -48,7 +58,7 @@ namespace Application.Services
             {
                 return null;
             }
-            return _userMapper.MapRegisterInsert(user);
+            return _userMapper.MapUserGet(user);
         }
     }
 }

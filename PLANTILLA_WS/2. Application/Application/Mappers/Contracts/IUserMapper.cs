@@ -9,7 +9,7 @@ namespace Application.Mappers.Contracts
         public UserModel MapRegister(UserViewModel register);
         public UserModel MapLogin(loginModel login);
         public UserViewModel MapUser(UserModel userModel);
-        public UserViewModel MapRegisterInsert(UserModel register);
+        public UserViewModel MapUserGet(UserModel register);
         public UserModel MapUserInsert(UserViewModel userViewModel);
     }
 }

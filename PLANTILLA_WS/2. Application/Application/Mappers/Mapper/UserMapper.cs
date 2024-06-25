@@ -90,7 +90,7 @@ namespace Application.Mappers.Mapper
             return registerModel;
         }
 
-        public UserViewModel MapRegisterInsert(UserModel register)
+        public UserViewModel MapUserGet(UserModel register)
         {
             var registerModel = new UserViewModel
             {
@@ -102,6 +102,7 @@ namespace Application.Mappers.Mapper
                 role = register.ROLE,
                 sex = register.SEX,
                 dniUser = register.DNI_USER,
+                photoUser = register.PHOTO_USER
             };
             return registerModel;
         }

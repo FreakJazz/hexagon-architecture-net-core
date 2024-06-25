@@ -9,8 +9,7 @@ namespace Domain.Interfaces
         public UserModel GetUserById(int id);
         public UserModel RegisterUser(UserModel registerModel);
         public UserModel GetUserByEmail(UserModel login);
-        public string AddUser(UserModel user);
-        public string UpdateUser(UserModel user);
-        public string DeleteUser(int id);
+        public UserModel UpdateUser(UserModel user);
+        public int DeleteUser(int id);
     }
 }

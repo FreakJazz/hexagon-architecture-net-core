@@ -65,29 +65,19 @@ namespace Services.Api.Controllers
                 var secretKey = _configuration.GetSection("ConfigKeys").GetSection("jwtKey").Value;
                 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
                 var tokenExpiration = DateTime.UtcNow.AddMinutes(int.Parse(_configuration.GetSection("ConfigKeys").GetSection("TimeAuthToken").Value));
-                var tokenRefreshExpiration = DateTime.UtcNow.AddDays(int.Parse(_configuration.GetSection("ConfigKeys").GetSection("TimeRefreshToken").Value));
                 // Crear AuthToken expira cada 10 minutos 
                 var jwtAuth = new JwtSecurityToken(
                     claims: BuildClaims(user),
                     expires: tokenExpiration,
                     signingCredentials: new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256)
                 );
-                // Crear RefreshToken expira cada día
-                var jwtRefresh = new JwtSecurityToken(
-                    claims: BuildClaims(user),
-                    expires: tokenRefreshExpiration,
-                    signingCredentials: new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256)
-                );
                 var Authtoken = new JwtSecurityTokenHandler().WriteToken(jwtAuth);
-                var RefreshToken = new JwtSecurityTokenHandler().WriteToken(jwtRefresh);
                 var token = new
                 {
                     Authtoken,
                     ExpiresAuthToken = tokenExpiration,
-                    RefreshToken,
-                    ExpiresRefreshToken = tokenRefreshExpiration,
-
                 };
+
                 response.statusCode = 200;
                 response.message = "Usuario obtenido con exito";
                 response.ok = true;
@@ -132,7 +122,6 @@ namespace Services.Api.Controllers
                 var secretKey = _configuration.GetSection("ConfigKeys").GetSection("jwtKey").Value;
                 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
                 var tokenExpiration = DateTime.UtcNow.AddMinutes(int.Parse(_configuration.GetSection("ConfigKeys").GetSection("TimeAuthToken").Value));
-                var tokenRefreshExpiration = DateTime.UtcNow.AddDays(int.Parse(_configuration.GetSection("ConfigKeys").GetSection("TimeRefreshToken").Value));
                 
                 // Crear AuthToken expira cada 10 minutos 
                 var jwtAuth = new JwtSecurityToken(
@@ -140,23 +129,11 @@ namespace Services.Api.Controllers
                     expires: tokenExpiration,
                     signingCredentials: new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256)
                 );
-
-                // Crear RefreshToken expira cada día
-                var jwtRefresh = new JwtSecurityToken(
-                    claims: BuildClaims(user),
-                    expires: tokenRefreshExpiration,
-                    signingCredentials: new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256)
-                );
-
                 var Authtoken = new JwtSecurityTokenHandler().WriteToken(jwtAuth);
-                var RefreshToken = new JwtSecurityTokenHandler().WriteToken(jwtRefresh);
                 var token = new
                 {
                     Authtoken,
                     ExpiresAuthToken = tokenExpiration,
-                    RefreshToken,
-                    ExpiresRefreshToken = tokenExpiration,
-
                 };
                 response.statusCode = 201;
                 response.message = "Usuario creado con exito";
