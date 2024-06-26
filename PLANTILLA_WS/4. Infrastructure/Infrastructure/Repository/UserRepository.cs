@@ -2,14 +2,8 @@
 using Infrastructure.Context;
 using Infrastructure.Contracts.Context;
 using Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Common.Logs;
 using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository
 {

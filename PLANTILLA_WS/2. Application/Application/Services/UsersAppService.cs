@@ -2,7 +2,6 @@
 using Application.Mappers.Contracts;
 using Application.ViewModels;
 using Domain.Interfaces;
-using Domain.Models;
 
 namespace Application.Services
 {

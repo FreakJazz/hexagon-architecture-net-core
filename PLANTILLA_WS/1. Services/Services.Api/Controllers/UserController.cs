@@ -1,7 +1,6 @@
 ﻿using Application.Interfaces;
 using Application.ViewModels;
 using Common.Logs;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Services.Api.Controllers
@@ -112,7 +111,6 @@ namespace Services.Api.Controllers
                 response.ok = false;
                 return StatusCode(StatusCodes.Status404NotFound, response);
             }
-
         }
     }
 }

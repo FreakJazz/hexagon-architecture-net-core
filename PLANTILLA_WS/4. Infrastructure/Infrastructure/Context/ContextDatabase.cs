@@ -16,6 +16,8 @@ namespace Infrastructure.Context
             _configuration = configuration;
         }
         public DbSet<UserModel> User { get; set; }
+        public DbSet<ClinicaModel> Clinica { get; set; }
+        public DbSet<RoleModel> Roles { get; set; }
 
         public new int SaveChanges()
         {
@@ -28,9 +30,13 @@ namespace Infrastructure.Context
 
             // Configuración explícita de los nombres de las tablas
             modelBuilder.Entity<UserModel>().ToTable("User");
+            modelBuilder.Entity<ClinicaModel>().ToTable("Clinica");
+            modelBuilder.Entity<RoleModel>().ToTable("Roles");
 
             // Configurar LoginModel como una entidad sin clave
             modelBuilder.Entity<UserModel>().HasKey(r => r.ID_USER);
+            modelBuilder.Entity<ClinicaModel>().HasKey(r => r.ID_CLINICA);
+            modelBuilder.Entity<RoleModel>().HasKey(r => r.ID_ROLE);
         }
 
         public new Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

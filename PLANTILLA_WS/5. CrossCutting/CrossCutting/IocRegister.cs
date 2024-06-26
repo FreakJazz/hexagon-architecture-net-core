@@ -23,9 +23,13 @@ namespace CrossCutting
             //Application
             #region Mappers
             services.AddScoped<IUserMapper, UserMapper>();
+            services.AddScoped<IClinicaMapper, ClinicaMapper>();
+            services.AddScoped<IRoleMapper, RoleMapper>();
             #endregion
             #region AppServices
             services.AddScoped<IUsersAppService, UsersAppService>();
+            services.AddScoped<IRoleAppService, RoleAppService>();
+            services.AddScoped<IClinicaAppService, ClinicaAppService>();
             services.AddScoped<IPasswordHasherAppService, BCryptPasswordHasherConfig>();
             #endregion
             #region AppServices
@@ -33,6 +37,8 @@ namespace CrossCutting
             //Domain - Commands
             //Infrastructure
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IClinicaRepository, ClinicaRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IContextDatabase, ContextDatabase>();
             #endregion
         }
